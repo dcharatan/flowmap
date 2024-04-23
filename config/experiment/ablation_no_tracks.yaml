@@ -1,0 +1,8 @@
+# @package _global_
+
+defaults:
+  # Only use the flow loss (no tracking loss).
+  - override /loss: [flow]
+
+wandb:
+  tags: [ablation_no_tracks]

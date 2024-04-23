@@ -1,0 +1,64 @@
+defaults:
+  - dataset: [co3d, re10k]
+  - frame_sampler: pretrain
+  - flow: gmflow
+  - model/backbone: midas
+  - model/intrinsics: softmin
+  - model/extrinsics: procrustes
+  - loss: [flow]
+  - visualizer: [summary, trajectory]
+  - _self_
+
+dataset:
+  co3d:
+    image_shape: [300, 400]
+    load_cameras: false
+    load_frame_paths: false
+  re10k:
+    image_shape: [300, 400]
+    roots: [datasets/re10k, datasets/acid]
+    load_cameras: false
+
+wandb:
+  project: flowmap
+  mode: disabled
+  name: placeholder
+  group: null
+  tags: null
+
+checkpoint:
+  every_n_train_steps: 50_000
+  load: null
+
+trainer:
+  val_check_interval: 250
+  max_steps: 50_000
+
+model_wrapper:
+  patch_size: 32
+  lr: 5e-5
+  num_vis_frames: 8
+
+cropping:
+  image_shape: [150, 200]
+  flow_scale_multiplier: 2
+  patch_size: 32
+
+model:
+  num_procrustes_points: 4096
+  randomize_procrustes_points: false
+  intrinsics:
+    regression: null
+  use_correspondence_weights: true
+
+data_module:
+  train:
+    num_workers: 16
+    persistent_workers: true
+    batch_size: 16
+    seed: 123
+  val:
+    num_workers: 1
+    persistent_workers: true
+    batch_size: 1
+    seed: 234

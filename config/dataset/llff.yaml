@@ -1,0 +1,7 @@
+llff:
+  # Common configuration items (all datasets have these)
+  scene: null
+  image_shape: null
+
+  # Dataset-specific configuration items
+  root: datasets/llff

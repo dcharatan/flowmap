@@ -1,0 +1,14 @@
+name: softmin
+
+num_procrustes_points: 8192
+
+min_focal_length: 0.5
+max_focal_length: 2.0
+num_candidates: 60
+
+# If this is non-null, the intrinsics will be regressed after the specified number of
+# steps. The initial regressed value will be the mean of the last n non-regressed
+# intrinsics estimates, where n is window.
+regression:
+  after_step: 1000
+  window: 100

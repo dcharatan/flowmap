@@ -1,0 +1,183 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Overfit",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "flowmap.overfit",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": [
+                "wandb.mode=disabled",
+                "trainer.max_steps=500",
+                "track_precomputation.cache_path=/tmp/flowmap/track_cache",
+            ],
+            "env": {
+                "CUDA_VISIBLE_DEVICES": "0",
+            }
+        },
+        {
+            "name": "Pretrain",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "flowmap.pretrain",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": [
+                "wandb.mode=disabled",
+                "data_module.train.num_workers=0",
+                "data_module.val.num_workers=0",
+            ],
+            "env": {
+                "CUDA_VISIBLE_DEVICES": "0",
+            }
+        },
+        {
+            "name": "Subsample Dataset",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "flowmap.subsample",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": [
+                "+in_path=datasets/flowmap/raw/mipnerf360_bonsai",
+                "+out_path=datasets/flowmap/subsampled/mipnerf360_bonsai",
+            ],
+            "env": {
+                "CUDA_VISIBLE_DEVICES": "0",
+            }
+        },
+        {
+            "name": "Run COLMAP (Sparse)",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "scripts.colmap.run_sparse",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": [
+                "datasets/llff/flower/images",
+                "workspace/sparse",
+            ],
+            "env": {
+                "CUDA_VISIBLE_DEVICES": "0",
+            }
+        },
+        {
+            "name": "Run COLMAP (Sparse and Dense, FlowMap Resolution)",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "scripts.colmap.run_both_at_flowmap_resolution",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": [
+                "datasets/llff/flower/images",
+                "workspace/sparse",
+                "workspace/dense",
+                "workspace/workspace",
+            ],
+            "env": {
+                "CUDA_VISIBLE_DEVICES": "0",
+            }
+        },
+        {
+            "name": "Render Point Cloud",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "paper.render_point_cloud",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": [],
+            "env": {
+                "CUDA_VISIBLE_DEVICES": "0",
+            }
+        },
+        {
+            "name": "Generate Trajectory Plots",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "paper.generate_trajectory_plots",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": [],
+            "env": {
+                "CUDA_VISIBLE_DEVICES": "0",
+            }
+        },
+        {
+            "name": "Generate Splat Comparison",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "paper.generate_splat_comparison",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": [],
+            "env": {
+                "CUDA_VISIBLE_DEVICES": "0",
+            }
+        },
+        {
+            "name": "Generate Baseline Comparison Table",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "paper.generate_baseline_comparison_table",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": [],
+            "env": {
+                "CUDA_VISIBLE_DEVICES": "0",
+            }
+        },
+        {
+            "name": "Generate Baseline Comparison Table (Supplemental)",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "paper.generate_baseline_comparison_table_supplemental",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": [],
+            "env": {
+                "CUDA_VISIBLE_DEVICES": "0",
+            }
+        },
+        {
+            "name": "Generate Ablation Table",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "paper.generate_ablation_table",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": [],
+            "env": {
+                "CUDA_VISIBLE_DEVICES": "0",
+            }
+        },
+        {
+            "name": "Generate Ablation Table (Supplemental)",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "paper.generate_ablation_table_supplemental",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": [],
+            "env": {
+                "CUDA_VISIBLE_DEVICES": "0",
+            }
+        },
+        {
+            "name": "Generate Ablation ATE Plot",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "paper.plot_ablation_ate",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": [],
+            "env": {
+                "CUDA_VISIBLE_DEVICES": "0",
+            }
+        },
+    ]
+}

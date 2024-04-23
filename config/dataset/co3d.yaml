@@ -1,0 +1,22 @@
+co3d:
+  # Common configuration items (all datasets have these)
+  scene: null
+  image_shape: null
+
+  # Dataset-specific configuration items
+  root: datasets/co3d
+  set_list: set_lists_fewview
+  categories:
+    - hydrant
+    - apple
+    - ball
+    - bench
+    - cake
+    - donut
+    - plant
+    - suitcase
+    - teddybear
+    - vase
+  
+  load_cameras: true
+  load_frame_paths: true

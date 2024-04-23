@@ -1,0 +1,15 @@
+# @package _global_
+
+defaults:
+  - override /model/backbone: explicit_depth
+
+model:
+  # Use all points for Procrustes. This makes sense because:
+  # 1. The model is much cheaper to run.
+  # 2. The model's depth outputs aren't smoothed/constrained by the CNN, so there would
+  #    be speckling artifacts if only a subset of points were used.
+  extrinsics:
+    num_points: null
+
+wandb:
+  tags: [ablation_explicit_depth]

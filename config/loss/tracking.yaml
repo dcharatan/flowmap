@@ -1,0 +1,6 @@
+defaults:
+  - mapping@tracking.mapping: huber
+
+tracking:
+  weight: 100.0
+  enable_after: 50

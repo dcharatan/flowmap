@@ -1,0 +1,5 @@
+name: raft
+
+num_flow_updates: 32
+max_batch_size: 8
+show_progress_bar: true

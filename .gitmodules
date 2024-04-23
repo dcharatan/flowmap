@@ -1,0 +1,3 @@
+[submodule "flowcam/third_party/gmflow"]
+	path = flowmap/third_party/gmflow
+	url = https://github.com/haofeixu/gmflow.git

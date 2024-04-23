@@ -1,0 +1,10 @@
+defaults:
+  - flow: raft
+  - _self_
+
+flow:
+  show_progress_bar: false
+
+target_num_frames: 150
+flow_resolution: 500_000
+limit_num_seconds: 60.0

@@ -1,0 +1,4 @@
+name: procrustes
+
+num_points: 1000
+randomize_points: false

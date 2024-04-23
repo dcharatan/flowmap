@@ -1,0 +1,3 @@
+trajectory:
+  generate_plot: true
+  ate_save_root: null

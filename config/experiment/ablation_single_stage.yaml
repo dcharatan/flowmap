@@ -1,0 +1,9 @@
+# @package _global_
+
+model:
+  intrinsics:
+    # Prevent the model from switching to regression.
+    regression: null
+
+wandb:
+  tags: [ablation_single_stage]

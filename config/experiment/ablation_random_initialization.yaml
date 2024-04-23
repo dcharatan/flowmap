@@ -1,0 +1,14 @@
+# @package _global_
+
+# Don't load a FlowMap checkpoint.
+checkpoint:
+  load: null
+
+# Also don't load a MiDaS checkpoint for the backbone.
+model:
+  backbone:
+    pretrained: false
+
+    # The original MiDaS mapping has a ReLU which gives dead gradients in many areas
+    # with a random initialization. We change it to exp for a fair comparison.
+    mapping: exp

@@ -1,0 +1,6 @@
+name: midas
+
+pretrained: true
+weight_sensitivity: null
+mapping: original
+model: MiDaS_small

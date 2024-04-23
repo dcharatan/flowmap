@@ -1,0 +1,4 @@
+name: explicit_depth
+
+initial_depth: 0.1
+weight_sensitivity: 100.0

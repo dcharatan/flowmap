@@ -1,0 +1,5 @@
+name: regressed
+
+# This is roughly in the middle of the focal length distribution for Tanks & Temples,
+# LLFF, and MipNeRF 360.
+initial_focal_length: 0.85

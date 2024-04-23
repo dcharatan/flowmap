@@ -1,0 +1,6 @@
+defaults:
+  - mapping@flow.mapping: huber
+
+flow:
+  weight: 1000.0
+  enable_after: 0

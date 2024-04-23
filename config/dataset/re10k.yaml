@@ -1,0 +1,9 @@
+re10k:
+  # Common configuration items (all datasets have these)
+  scene: null
+  image_shape: null
+
+  # Dataset-specific configuration items
+  roots: [datasets/re10k]
+  load_cameras: false
+  frame_skip: 9

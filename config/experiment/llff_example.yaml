@@ -1,0 +1,11 @@
+# @package _global_
+
+defaults:
+  - override /dataset: [llff]
+
+dataset:
+  llff:
+    scene: flower
+
+wandb:
+  name: llff_example

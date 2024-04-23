@@ -1,0 +1,14 @@
+colmap:
+  # Common configuration items (all datasets have these)
+  scene: null
+  image_shape: null
+
+  # Dataset-specific configuration items
+  root: datasets/flowmap/colmap/llff_flower
+  
+  # COLMAP generally shuffles the images. This re-orders them based on file names.
+  reorder: true
+
+  # If there's no sparse folder, interpret the root as a regular image folder. This
+  # makes it slightly easier to script large numbers of jobs on Slurm.
+  use_image_folder_fallback: true

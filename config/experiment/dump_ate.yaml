@@ -1,0 +1,17 @@
+# @package _global_
+
+defaults:
+  # Only run the trajectory visualizer.
+  - override /visualizer: [trajectory]
+
+visualizer:
+  trajectory:
+    # Don't waste time generating plots.
+    generate_plot: false
+
+    # Change this to something more useful!
+    ate_save_path: ate.json
+
+trainer:
+  # Dump ATE for every step.
+  val_check_interval: 1

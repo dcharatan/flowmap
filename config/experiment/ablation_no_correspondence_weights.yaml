@@ -1,0 +1,7 @@
+# @package _global_
+
+model:
+  use_correspondence_weights: false
+
+wandb:
+  tags: [ablation_no_correspondence_weights]

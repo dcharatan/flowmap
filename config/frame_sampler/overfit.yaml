@@ -1,0 +1,6 @@
+name: overfit
+
+# This clips the input video.
+start: null
+num_frames: null
+step: null

@@ -1,0 +1,7 @@
+# @package _global_
+
+model:
+  backbone:
+    model: DPT_Large
+    mapping: exp
+    pretrained: false

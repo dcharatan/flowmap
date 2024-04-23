@@ -1,0 +1,4 @@
+name: cotracker
+
+grid_size: 35
+similarity_threshold: 0.2
