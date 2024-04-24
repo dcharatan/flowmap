@@ -46,7 +46,7 @@ Some of the videos in the Real Estate 10k dataset are no longer publicly availab
 
 ## Evaluation Datasets
 
-We evaluated FlowMap using video subsets of the [Local Light Field Fusion (LLFF)](https://drive.google.com/drive/folders/1M-_Fdn4ajDa0CS8-iqejv0fQQeuonpKF?usp=drive_link), [Mip-NeRF 360](https://jonbarron.info/mipnerf360/), and [Tanks & Temples](https://www.tanksandtemples.org/download/) datasets. We've uploaded a compilation of these datasets [here](https://drive.google.com/drive/folders/1PqByQSfzyLjfdZZDwn6RXIECso7WB9IY?usp=drive_link). Note that the Mip-NeRF 360 dataset has to be downloaded separately, since we couldn't find its license.
+We evaluated FlowMap using video subsets of the [Local Light Field Fusion (LLFF)](https://drive.google.com/drive/folders/1M-_Fdn4ajDa0CS8-iqejv0fQQeuonpKF?usp=drive_link), [Mip-NeRF 360](https://jonbarron.info/mipnerf360/), and [Tanks & Temples](https://www.tanksandtemples.org/download/) datasets. We've uploaded a compilation of these datasets [here](https://drive.google.com/drive/folders/1PqByQSfzyLjfdZZDwn6RXIECso7WB9IY?usp=drive_link).
 
 <details>
 <summary>Dataset Details</summary>
