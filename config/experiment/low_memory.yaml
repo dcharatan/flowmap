@@ -1,0 +1,5 @@
+# @package _global_
+
+cropping:
+  image_shape: 10800
+  flow_scale_multiplier: 8
