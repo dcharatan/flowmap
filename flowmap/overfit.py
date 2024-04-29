@@ -104,7 +104,6 @@ def overfit(cfg_dict: DictConfig) -> None:
         callbacks=callbacks,
         val_check_interval=cfg.trainer.val_check_interval,
         max_steps=cfg.trainer.max_steps,
-        plugins=[SLURMEnvironment(auto_requeue=False)],
         log_every_n_steps=1,
     )
     trainer.fit(
