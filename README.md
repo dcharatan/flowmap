@@ -69,9 +69,13 @@ We used all scenes from the [Tanks & Temples](https://tanksandtemples.org/downlo
 
 Each ablation shown in the paper has a [Hydra](https://hydra.cc/docs/intro/) configuration at `config/experiment`. For example, to run the ablation where point tracking is disabled, add `+experiment=ablation_no_tracks` to the overfitting command. Note that you can stack most of the ablations, e.g., `+experiment=[ablation_no_tracks,ablation_random_initialization]`.
 
+## Generating Novel View Synthesis Results
+
+We used a modified version of the original 3D Gaussian Splatting code that backpropagates into camera positions in order to generate the novel view synthesis results shown in the paper. You can find it [here](https://github.com/cameronosmith/gaussian_barf).
+
 ## Figure and Table Generation
 
-Some of the code used to generate the tables and figures in the paper can be found in the `assets` folder.
+Some of the code used to generate the tables and figures in the paper can be found in the `assets` folder. We used this code alongside Figma and LaTeXiT to create the figures in the paper. You can find our Figma file [here](https://www.figma.com/file/WLHx9d6qDRol9xowBTnHf7/FlowMap-Figures?type=design&node-id=316%3A76&mode=design&t=Dmyz4HXwW0oCp0Ru-1).
 
 ## BibTeX
 
