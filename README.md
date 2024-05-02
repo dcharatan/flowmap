@@ -75,7 +75,7 @@ We used a modified version of the original 3D Gaussian Splatting code that backp
 
 ## Figure and Table Generation
 
-Some of the code used to generate the tables and figures in the paper can be found in the `assets` folder. We used this code alongside Figma and LaTeXiT to create the figures in the paper. You can find our Figma file [here](https://www.figma.com/file/WLHx9d6qDRol9xowBTnHf7/FlowMap-Figures?type=design&node-id=316%3A76&mode=design&t=Dmyz4HXwW0oCp0Ru-1).
+Some of the code used to generate the tables and figures in the paper can be found in the `assets` folder. We used this code alongside Figma and LaTeXiT to create the figures in the paper. You can find our Figma file [here](https://www.figma.com/file/WLHx9d6qDRol9xowBTnHf7/FlowMap-Figures?type=design&node-id=0-1&mode=design).
 
 ## BibTeX
 
