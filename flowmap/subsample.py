@@ -75,7 +75,7 @@ def video_to_frames(
     """Convert a full video to frames using ffmpeg."""
     out_path.mkdir(exist_ok=True, parents=True)
     limit = None if limit_num_seconds is None else f"-t {limit_num_seconds}"
-    command = f"ffmpeg -i {in_path} {limit} {out_path}/frame_%06d.jpg"
+    command = f"ffmpeg -i {in_path} {limit} {out_path}/frame_%06d.png"
     if subprocess.run(command.split(" ")).returncode != 0:
         raise ValueError("ffmpeg conversion failed")
 
@@ -128,6 +128,7 @@ def subsample_frames(
 
         # Compute the mean flows.
         mean_flows.append(flow_predictor.forward(videos).norm(dim=-1).mean().item())
+        last = current
 
     flow_step = sum(mean_flows) / target_num_frames
     remaining = 0
