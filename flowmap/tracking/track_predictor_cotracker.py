@@ -44,7 +44,7 @@ class TrackPredictorCoTracker(TrackPredictor[TrackPredictorCoTrackerCfg]):
         # Filter visibility based on RGB values.
         rgb = F.grid_sample(
             rearrange(videos, "b f c h w -> (b f) c h w"),
-            rearrange(xy, "b f p xy -> (b f) p () xy"),
+            rearrange(2 * xy - 1, "b f p xy -> (b f) p () xy"),
             mode="bilinear",
             padding_mode="zeros",
             align_corners=False,
