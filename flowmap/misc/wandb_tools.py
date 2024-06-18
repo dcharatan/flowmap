@@ -29,7 +29,7 @@ def download_checkpoint(
             if chosen is None or version_to_int(artifact) > version_to_int(chosen):
                 chosen = artifact
 
-        # If a specific verison is specified, look for it.
+        # If a specific version is specified, look for it.
         elif version == artifact.version:
             chosen = artifact
             break
