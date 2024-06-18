@@ -196,7 +196,7 @@ def validate_things(model,
                     corr_radius_list=False,
                     prop_radius_list=False,
                     ):
-    """ Peform validation using the Things (test) split """
+    """ Perform validation using the Things (test) split """
     model.eval()
     results = {}
 
@@ -293,7 +293,7 @@ def validate_sintel(model,
                     corr_radius_list=False,
                     prop_radius_list=False,
                     ):
-    """ Peform validation using the Sintel (train) split """
+    """ Perform validation using the Sintel (train) split """
     model.eval()
     results = {}
 
@@ -437,7 +437,7 @@ def validate_kitti(model,
                    corr_radius_list=False,
                    prop_radius_list=False,
                    ):
-    """ Peform validation using the KITTI-2015 (train) split """
+    """ Perform validation using the KITTI-2015 (train) split """
     model.eval()
 
     val_dataset = data.KITTI(split='training')
