@@ -80,11 +80,11 @@ Some of the code used to generate the tables and figures in the paper can be fou
 ## BibTeX
 
 ```bibtex
-@inproceedings{smith24flowmap,
+@inproceedings{smith25flowmap,
       title={FlowMap: High-Quality Camera Poses, Intrinsics, and Depth via Gradient Descent},
       author={Cameron Smith and David Charatan and Ayush Tewari and Vincent Sitzmann},
-      year={2024},
-      booktitle={arXiv},
+      year={2025},
+      booktitle={3DV},
 }
 ```
 
