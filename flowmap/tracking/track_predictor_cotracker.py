@@ -20,6 +20,9 @@ class TrackPredictorCoTrackerCfg:
 class TrackPredictorCoTracker(TrackPredictor[TrackPredictorCoTrackerCfg]):
     def __init__(self, cfg: TrackPredictorCoTrackerCfg) -> None:
         super().__init__(cfg)
+        # fix torch.hub HTTP Error 403
+        # according to https://github.com/pytorch/vision/issues/4156#issuecomment-886005117
+        torch.hub._validate_not_a_forked_repo=lambda a,b,c: True
         self.tracker = torch.hub.load(
             "facebookresearch/co-tracker:v1.0", "cotracker_w8"
         )
